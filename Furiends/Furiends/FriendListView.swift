@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct tatiew: View {
+struct FriendListView: View {
     var body: some View {
         Text("Hello, World!")
     }
