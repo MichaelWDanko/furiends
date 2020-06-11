@@ -14,8 +14,25 @@ struct FriendListView: View {
     }
 }
 
+struct FriendView: View {
+    @State private var isExpanded = false
+    
+    var body: some View {
+        VStack {
+            Image("dog")
+                .resizable()
+                .clipShape(Circle())
+                .scaledToFit()
+                .frame(idealWidth: .infinity)
+            Text("Name")
+                .font(.headline)
+            
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendListView()
+        FriendView()
     }
 }
