@@ -12,48 +12,63 @@ struct FriendListView: View {
     var pets = ["Woofer", "Floofer", "Booper"]
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(self.pets, id: \.self) {
-                    FriendView(name: $0)
-                }
-            }
-            .navigationBarTitle("Furiends")
-            Spacer()
-        }
-    }
+        GeometryReader { geo in
+            NavigationView {
+                ScrollView {
+                    ForEach(self.pets, id: \.self) { pet in
+                        HStack {
+                            Spacer()
+                            FriendView(name: pet, screenWidth: geo.size.width)
+                            Spacer()
+                        }
+                    }
+                }// End of List
+                .navigationBarTitle(Text("Furiends"))
+                
+            }// End of NavigationView
+        }// End of GeometryReader geo1
+    }// End of body
 }
-
 struct FriendView: View {
     @State private var isExpanded = false
-    
     var name =  ""
-    var body: some View {
-        Button(action: toggleExpand) {
-            HStack {
-                VStack {
-                    Image("dog")
-                        .renderingMode(.original)
-                        .resizable()
-                        .clipShape(Circle())
-                        .scaledToFit()
-//                    if self.isExpanded == false {
-//                        Text("Name")
-//                            .font(.headline)
-//                    }
-                    
-                }
-                if self.isExpanded == true {
-                    Text(name).font(.title)
-                    Text("Breed").font(.headline)
-                }
-            
-            }
-        }
-        .animation(.default)
-    .user
-    }
+    var breed = "Dawg"
     
+    var screenWidth: CGFloat
+    var maxWidth: CGFloat {
+        isExpanded ? screenWidth / 4 : screenWidth / 2
+    }
+    var randomPic = Int.random(in: 1...2)
+   
+    var body: some View {
+
+            Button(action: self.toggleExpand) {
+                HStack {
+                    VStack {
+                    Image("dog\(self.randomPic)")
+                        .resizable()
+                        .renderingMode(.original)
+                        .scaledToFill()
+                        .frame(maxWidth: maxWidth)
+                        .clipShape(Circle())
+                        
+                       if self.isExpanded == false {
+                        Text(self.name)
+                            .font(.title)
+                            .foregroundColor(.primary)
+                       }
+                   }
+
+                   if self.isExpanded == true {
+                       VStack {
+                        Text(self.name).font(.title)
+                        Text(self.breed).font(.headline)
+                       }
+                       .foregroundColor(.primary)
+                   }
+               }
+            }// End of Button
+    }
     func toggleExpand() {
         isExpanded.toggle()
     }
