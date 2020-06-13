@@ -8,17 +8,38 @@
 
 import SwiftUI
 
+class FriendListModel: ObservableObject {
+    
+    @Published var petList = [Pet]()
+    
+    init() {
+        petList.append(Pet(name: "Woofer"))
+        petList.append(Pet(name: "Flooder"))
+        petList.append(Pet(name: "Super"))
+        petList.append(Pet(name: "Dooper"))
+        petList.append(Pet(name: "Booper"))
+    }
+}
+
+struct Pet {
+    var id = UUID().uuidString
+    var name: String
+}
+
 struct FriendListView: View {
-    var pets = ["Woofer", "Floofer", "Booper"]
+//    var pets = ["Woofer", "Floofer", "Super", "Dooper", "Booper"]
+    
+@ObservedObject var dataModel = FriendListModel()
+    
     
     var body: some View {
         GeometryReader { geo in
             NavigationView {
                 ScrollView {
-                    ForEach(self.pets, id: \.self) { pet in
+                    ForEach(0..<self.dataModel.petList.count) { pet in
                         HStack {
                             Spacer()
-                            FriendView(name: pet, screenWidth: geo.size.width)
+                            FriendView(name: self.dataModel.petList[pet].name, screenWidth: geo.size.width)
                             Spacer()
                         }
                     }
