@@ -22,7 +22,7 @@ struct FriendListView: View {
                             Spacer()
                         }
                     }
-                }// End of List
+                }// End of ScrollView
                 .navigationBarTitle(Text("Furiends"))
                 
             }// End of NavigationView
@@ -49,8 +49,8 @@ struct FriendView: View {
                         .resizable()
                         .renderingMode(.original)
                         .scaledToFill()
-                        .frame(maxWidth: maxWidth)
                         .clipShape(Circle())
+                        .frame(maxWidth: maxWidth)
                         
                        if self.isExpanded == false {
                         Text(self.name)
