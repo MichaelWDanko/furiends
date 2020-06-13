@@ -50,7 +50,7 @@ struct FriendView: View {
                         .renderingMode(.original)
                         .scaledToFill()
                         .clipShape(Circle())
-                        .frame(maxWidth: maxWidth)
+                        .frame(width: maxWidth, height: maxWidth)
                         
                        if self.isExpanded == false {
                         Text(self.name)
