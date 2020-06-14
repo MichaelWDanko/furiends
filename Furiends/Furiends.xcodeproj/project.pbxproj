@@ -10,10 +10,13 @@
 		DA1A97542492F38A0093838D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A97532492F38A0093838D /* AppDelegate.swift */; };
 		DA1A97562492F38A0093838D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A97552492F38A0093838D /* SceneDelegate.swift */; };
 		DA1A97592492F38A0093838D /* Furiends.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA1A97572492F38A0093838D /* Furiends.xcdatamodeld */; };
-		DA1A975B2492F38A0093838D /* FriendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A975A2492F38A0093838D /* FriendListView.swift */; };
+		DA1A975B2492F38A0093838D /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A975A2492F38A0093838D /* ListView.swift */; };
 		DA1A975D2492F38A0093838D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1A975C2492F38A0093838D /* Assets.xcassets */; };
 		DA1A97602492F38A0093838D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1A975F2492F38A0093838D /* Preview Assets.xcassets */; };
 		DA1A97632492F38A0093838D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1A97612492F38A0093838D /* LaunchScreen.storyboard */; };
+		DA5A90E42495B45500BE9C57 /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E32495B45500BE9C57 /* FriendView.swift */; };
+		DA5A90E62495B47E00BE9C57 /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E52495B47E00BE9C57 /* AddFriendView.swift */; };
+		DA5A90E92495B89100BE9C57 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E82495B89100BE9C57 /* FriendModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +24,14 @@
 		DA1A97532492F38A0093838D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA1A97552492F38A0093838D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DA1A97582492F38A0093838D /* Furiends.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Furiends.xcdatamodel; sourceTree = "<group>"; };
-		DA1A975A2492F38A0093838D /* FriendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListView.swift; sourceTree = "<group>"; };
+		DA1A975A2492F38A0093838D /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		DA1A975C2492F38A0093838D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA1A975F2492F38A0093838D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA1A97622492F38A0093838D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA1A97642492F38A0093838D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA5A90E32495B45500BE9C57 /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
+		DA5A90E52495B47E00BE9C57 /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
+		DA5A90E82495B89100BE9C57 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,8 @@
 			children = (
 				DA1A97532492F38A0093838D /* AppDelegate.swift */,
 				DA1A97552492F38A0093838D /* SceneDelegate.swift */,
-				DA1A975A2492F38A0093838D /* FriendListView.swift */,
+				DA5A90EA2495BF8600BE9C57 /* Components */,
+				DA5A90E72495B49300BE9C57 /* Views */,
 				DA1A975C2492F38A0093838D /* Assets.xcassets */,
 				DA1A97612492F38A0093838D /* LaunchScreen.storyboard */,
 				DA1A97642492F38A0093838D /* Info.plist */,
@@ -76,6 +83,24 @@
 				DA1A975F2492F38A0093838D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DA5A90E72495B49300BE9C57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA5A90E82495B89100BE9C57 /* FriendModel.swift */,
+				DA1A975A2492F38A0093838D /* ListView.swift */,
+				DA5A90E52495B47E00BE9C57 /* AddFriendView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DA5A90EA2495BF8600BE9C57 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DA5A90E32495B45500BE9C57 /* FriendView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA1A97542492F38A0093838D /* AppDelegate.swift in Sources */,
+				DA5A90E92495B89100BE9C57 /* FriendModel.swift in Sources */,
 				DA1A97592492F38A0093838D /* Furiends.xcdatamodeld in Sources */,
-				DA1A975B2492F38A0093838D /* FriendListView.swift in Sources */,
+				DA1A975B2492F38A0093838D /* ListView.swift in Sources */,
+				DA5A90E62495B47E00BE9C57 /* AddFriendView.swift in Sources */,
+				DA5A90E42495B45500BE9C57 /* FriendView.swift in Sources */,
 				DA1A97562492F38A0093838D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +321,7 @@
 				DEVELOPMENT_TEAM = PD8DBCPLQ4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Furiends/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +342,7 @@
 				DEVELOPMENT_TEAM = PD8DBCPLQ4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Furiends/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
