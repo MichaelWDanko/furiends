@@ -33,8 +33,12 @@ struct AddFriendView: View {
     
     func saveFriend() {
         print("Going to save a new friend!")
-        FriendDataModel.addFriend(name: newPetName, breed: newPetBreed)
         print(FriendDataModel.petList)
+        FriendDataModel.addFriend(name: newPetName, breed: newPetBreed)
+        print("Saved a new friend!")
+        print(FriendDataModel.petList)
+        
+        
         self.newPetName = ""
         self.newPetBreed = ""
         self.isPresented.wrappedValue.dismiss()

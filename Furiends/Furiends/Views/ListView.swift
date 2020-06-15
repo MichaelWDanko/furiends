@@ -8,9 +8,14 @@
 
 import SwiftUI
 
+//class Settings: ObservableObject {
+//    <#code#>
+//}
+
+
 struct FriendListView: View {   
     
-    @ObservedObject var dataModel = FriendModel()
+    @EnvironmentObject var dataModel: FriendModel
     
     @State private var displayAddFriendSheet = false
     
@@ -18,12 +23,12 @@ struct FriendListView: View {
         GeometryReader { geo in
             NavigationView {
                 ScrollView {
-                    List(self.dataModel.petList) { pet in
+                    ForEach(self.dataModel.petList) { pet in
                         HStack {
                             Spacer()
                             FriendView(
-                                name: self.dataModel.petList[pet].name,
-                                breed: self.dataModel.petList[pet].breed,
+                                name: pet.name,
+                                breed: pet.breed,
                                 screenWidth: geo.size.width,
                                 randomPic: Int.random(in: 1...2)
                             )
@@ -50,17 +55,17 @@ struct FriendListView: View {
     }// End of body
     
     func showAddFriend() {
-//        self.displayAddFriendSheet.toggle()
-        self.dataModel.addFriend(name: "Jax", breed: "Doodle")
-        print(dataModel.petList)
+        self.displayAddFriendSheet.toggle()
+//        self.dataModel.addFriend(name: "Jax", breed: "Doodle")
+//        print(dataModel.petList)
         
     }// Enf of showAddFriend
     
 }// End of FriendListView
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendListView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FriendListView()
+//    }
+//}
