@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AddFriendView: View {
     
-    @ObservedObject var FriendDataModel = FriendModel()
+    @ObservedObject var FriendDataModel: FriendModel
     
     @State private var newPetName = ""
     @State private var newPetBreed = ""
@@ -44,10 +44,10 @@ struct AddFriendView: View {
         self.isPresented.wrappedValue.dismiss()
     }
     
-}
+}// End of AddFriendView
 
-struct AddFriend_Previews: PreviewProvider {
-    static var previews: some View {
-        AddFriendView()
-    }
-}
+//struct AddFriend_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddFriendView()
+//    }
+//}

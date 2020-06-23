@@ -47,7 +47,7 @@ struct FriendListView: View {
                 
                 )
                 .sheet(isPresented: self.$displayAddFriendSheet) {
-                        AddFriendView()
+                    AddFriendView(FriendDataModel: self.dataModel)
                 }
                 
             }// End of NavigationView
