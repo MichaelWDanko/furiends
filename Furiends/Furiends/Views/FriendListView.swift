@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FriendListView.swift
 //  Furiends
 //
 //  Created by Michael Danko on 6/11/20.
@@ -8,9 +8,14 @@
 
 import SwiftUI
 
-struct ListView: View {
+//class Settings: ObservableObject {
+//    <#code#>
+//}
+
+
+struct FriendListView: View {   
     
-    @ObservedObject var FriendDataModel = FriendModel()
+    @EnvironmentObject var dataModel: FuriendModel
     
     @State private var displayAddFriendSheet = false
     
@@ -18,13 +23,19 @@ struct ListView: View {
         GeometryReader { geo in
             NavigationView {
                 ScrollView {
-                    ForEach(0..<self.FriendDataModel.petList.count) { pet in
+                    ForEach(self.dataModel.petList) { pet in
                         HStack {
                             Spacer()
                             FriendView(
-                                name: self.FriendDataModel.petList[pet].name,
-                                breed: self.FriendDataModel.petList[pet].breed,
-                                screenWidth: geo.size.width)
+                                name: pet.name,
+                                breed: pet.breed,
+                                screenWidth: geo.size.width,
+                                randomPic: Int.random(in: 1...2)
+                            )
+//                            FriendView(
+//                                name: self.dataModel.petList[pet].name,
+//                                breed: self.dataModel.petList[pet].breed,
+//                                screenWidth: geo.size.width)
                             Spacer()
                         }
                     }
@@ -36,7 +47,7 @@ struct ListView: View {
                 
                 )
                 .sheet(isPresented: self.$displayAddFriendSheet) {
-                        AddFriendView()
+                    AddFriendView(FriendDataModel: self.dataModel)
                 }
                 
             }// End of NavigationView
@@ -45,12 +56,16 @@ struct ListView: View {
     
     func showAddFriend() {
         self.displayAddFriendSheet.toggle()
-    }
+//        self.dataModel.addFriend(name: "Jax", breed: "Doodle")
+//        print(dataModel.petList)
+        
+    }// Enf of showAddFriend
+    
 }// End of FriendListView
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FriendListView()
+//    }
+//}

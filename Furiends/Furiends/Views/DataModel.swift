@@ -1,5 +1,5 @@
 //
-//  FriendModel.swift
+//  DataModel.swift
 //  Furiends
 //
 //  Created by Michael Danko on 6/13/20.
@@ -14,7 +14,7 @@ struct Pet: Identifiable {
     var breed: String
 }
 
-class FriendModel: ObservableObject {
+class FuriendModel: ObservableObject {
     
     @Published var petList = [Pet]()
     

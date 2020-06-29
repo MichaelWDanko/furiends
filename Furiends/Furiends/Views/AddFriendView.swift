@@ -1,5 +1,5 @@
 //
-//  AddFriend.swift
+//  AddFriendView.swift
 //  Furiends
 //
 //  Created by Michael Danko on 6/13/20.
@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AddFriendView: View {
     
-    @ObservedObject var FriendDataModel: FriendModel
+    @ObservedObject var FriendDataModel: FuriendModel
     
     @State private var newPetName = ""
     @State private var newPetBreed = ""
