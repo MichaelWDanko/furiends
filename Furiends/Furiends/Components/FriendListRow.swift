@@ -1,5 +1,5 @@
 //
-//  FriendView.swift
+//  FriendListRow.swift
 //  Furiends
 //
 //  Created by Michael Danko on 6/13/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FriendView: View {
+struct FriendListRow: View {
     @State private var isExpanded = false
     var name =  ""
     var breed = ""
@@ -22,6 +22,10 @@ struct FriendView: View {
     var body: some View {
 
             Button(action: self.toggleExpand) {
+                
+                
+                
+                
                 HStack {
                     VStack {
                     Image("dog\(self.randomPic)")

@@ -26,7 +26,7 @@ struct FriendListView: View {
                     ForEach(self.dataModel.petList) { pet in
                         HStack {
                             Spacer()
-                            FriendView(
+                            FriendListRow(
                                 name: pet.name,
                                 breed: pet.breed,
                                 screenWidth: geo.size.width,
