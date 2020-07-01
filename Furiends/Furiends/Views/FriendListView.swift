@@ -22,7 +22,7 @@ struct FriendListView: View {
     var body: some View {
         GeometryReader { geo in
             NavigationView {
-                ScrollView {
+                List {
                     ForEach(self.dataModel.petList) { pet in
                         HStack {
                             Spacer()

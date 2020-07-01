@@ -10,6 +10,7 @@ import SwiftUI
 
 struct FriendListRow: View {
     @State private var isExpanded = false
+    @Namespace private var animation
     var name =  ""
     var breed = ""
     
@@ -20,47 +21,99 @@ struct FriendListRow: View {
     var randomPic = Int.random(in: 1...2)
    
     var body: some View {
-
-            Button(action: self.toggleExpand) {
-                
-                
-                
+    
+        Group {
+            if self.isExpanded {
+                //Row is expanded. Need to show details beside picture.
                 
                 HStack {
-                    VStack {
+//                    Spacer()
                     Image("dog\(self.randomPic)")
                         .resizable()
-                        .renderingMode(.original)
-                        .scaledToFill()
-                        .clipShape(Circle())
+                        .furiendImage()
                         .frame(width: maxWidth, height: maxWidth)
-                        
-                       if self.isExpanded == false {
-                        Text(self.name)
-                            .font(.title)
-                            .foregroundColor(.primary)
-                       }
-                   }
-
-                   if self.isExpanded == true {
-                       VStack {
+                        .matchedGeometryEffect(id: "FuriendImage", in: self.animation)
+//                    Spacer()
+                    VStack {
                         Text(self.name).font(.title)
+                            .furiendName()
                         Text(self.breed).font(.headline)
-                       }
-                       .foregroundColor(.primary)
-                   }
-               }
-            }// End of Button
+                            .animation(.easeIn)
+                    }
+                    .foregroundColor(.primary)
+                    Spacer()
+                    
+                }// End of HStack
+                .animation(.easeOut(duration: 1.0))
+                .matchedGeometryEffect(id: "DetailsContainer", in: self.animation)
+                .onTapGesture {
+                    self.isExpanded.toggle()
+                }
+                
+            } else {
+                //Row is not expanded. Need to show name below picture.
+                
+                VStack {
+                    
+                    Image("dog\(self.randomPic)")
+                        .resizable()
+                        .furiendImage()
+                        .frame(width: maxWidth, height: maxWidth)
+                        .matchedGeometryEffect(id: "FuriendImage", in: self.animation)
+                    
+                    Text(self.name)
+                        .furiendName()
+                    
+               }//End of VStack
+                .animation(.easeOut(duration: 1.0))
+                .matchedGeometryEffect(id: "DetailsContainer", in: self.animation)
+                .onTapGesture {
+                    self.isExpanded.toggle()
+                }
+                
+            }// End of If/Else
+        }
     }// End of body
     
-    func toggleExpand() {
-        isExpanded.toggle()
-    }
 }// End of FriendView
 
+struct FuriendImage: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .scaledToFill()
+            .clipShape(Circle())
+            .animation(.easeIn)
+    }
+}
+extension View {
+    func furiendImage() -> some View {
+        self.modifier(FuriendImage())
+    }
+}
 
+
+
+struct FuriendName: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.title)
+            .foregroundColor(.primary)
+            .animation(.easeIn)
+            .frame(minWidth: 0, maxWidth: .infinity)
+    }
+}
+extension View {
+    func furiendName() -> some View {
+        self.modifier(FuriendName())
+    }
+}
+
+//
 //struct FriendView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        FriendView()
+//        GeometryReader { geo in
+//            FriendListRow(screenWidth: geo.size.width)
+//        }
+//
 //    }
 //}

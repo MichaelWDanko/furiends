@@ -25,7 +25,7 @@ class FuriendModel: ObservableObject {
     init() {
         petList.append(Pet(name: "Woofer", breed: "Dawg"))
         petList.append(Pet(name: "Floofer", breed: "Dawg"))
-//        petList.append(Pet(name: "Super", breed: "Dawg"))
+        petList.append(Pet(name: "Jax", breed: "Dawg"))
 //        petList.append(Pet(name: "Dooper", breed: "Dawg"))
 //        petList.append(Pet(name: "Booper", breed: "Dawg"))
     }
