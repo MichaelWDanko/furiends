@@ -44,7 +44,7 @@ struct FriendListRow: View {
                     Spacer()
                     
                 }// End of HStack
-                .animation(.easeOut(duration: 1.0))
+//                .animation(.easeOut(duration: 1.0))
                 .matchedGeometryEffect(id: "DetailsContainer", in: self.animation)
                 .onTapGesture {
                     self.isExpanded.toggle()
@@ -65,10 +65,11 @@ struct FriendListRow: View {
                         .furiendName()
                     
                }//End of VStack
-                .animation(.easeOut(duration: 1.0))
+//                .animation(.easeOut(duration: 1.0))
                 .matchedGeometryEffect(id: "DetailsContainer", in: self.animation)
                 .onTapGesture {
                     self.isExpanded.toggle()
+                    
                 }
                 
             }// End of If/Else

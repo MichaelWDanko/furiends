@@ -22,7 +22,7 @@ struct FriendListView: View {
     var body: some View {
         GeometryReader { geo in
             NavigationView {
-                List {
+                ScrollView {
                     ForEach(self.dataModel.petList) { pet in
                         HStack {
                             Spacer()
@@ -32,6 +32,7 @@ struct FriendListView: View {
                                 screenWidth: geo.size.width,
                                 randomPic: Int.random(in: 1...2)
                             )
+                            .animation(.default)
 //                            FriendView(
 //                                name: self.dataModel.petList[pet].name,
 //                                breed: self.dataModel.petList[pet].breed,
