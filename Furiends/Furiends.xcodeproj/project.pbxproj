@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		4C34E5EE24A96E560051DFD0 /* FuriendsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuriendsApp.swift; sourceTree = "<group>"; };
-		DA1A97502492F38A0093838D /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1A97502492F38A0093838D /* Furiends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furiends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1A97582492F38A0093838D /* Furiends.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Furiends.xcdatamodel; sourceTree = "<group>"; };
 		DA1A975A2492F38A0093838D /* FriendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListView.swift; sourceTree = "<group>"; };
 		DA1A975C2492F38A0093838D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		DA1A97512492F38A0093838D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA1A97502492F38A0093838D /* iOS.app */,
+				DA1A97502492F38A0093838D /* Furiends.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,9 +89,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DA1A974F2492F38A0093838D /* iOS */ = {
+		DA1A974F2492F38A0093838D /* Furiends */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA1A97672492F38A0093838D /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildConfigurationList = DA1A97672492F38A0093838D /* Build configuration list for PBXNativeTarget "Furiends" */;
 			buildPhases = (
 				DA1A974C2492F38A0093838D /* Sources */,
 				DA1A974D2492F38A0093838D /* Frameworks */,
@@ -101,9 +101,9 @@
 			);
 			dependencies = (
 			);
-			name = iOS;
+			name = Furiends;
 			productName = Furiends;
-			productReference = DA1A97502492F38A0093838D /* iOS.app */;
+			productReference = DA1A97502492F38A0093838D /* Furiends.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA1A974F2492F38A0093838D /* iOS */,
+				DA1A974F2492F38A0093838D /* Furiends */,
 			);
 		};
 /* End PBXProject section */
@@ -337,7 +337,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA1A97672492F38A0093838D /* Build configuration list for PBXNativeTarget "iOS" */ = {
+		DA1A97672492F38A0093838D /* Build configuration list for PBXNativeTarget "Furiends" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA1A97682492F38A0093838D /* Debug */,

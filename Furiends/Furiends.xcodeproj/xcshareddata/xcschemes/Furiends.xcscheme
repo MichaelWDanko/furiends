@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DA1A974F2492F38A0093838D"
-               BuildableName = "iOS.app"
-               BlueprintName = "iOS"
+               BuildableName = "Furiends.app"
+               BlueprintName = "Furiends"
                ReferencedContainer = "container:Furiends.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DA1A974F2492F38A0093838D"
-            BuildableName = "iOS.app"
-            BlueprintName = "iOS"
+            BuildableName = "Furiends.app"
+            BlueprintName = "Furiends"
             ReferencedContainer = "container:Furiends.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DA1A974F2492F38A0093838D"
-            BuildableName = "iOS.app"
-            BlueprintName = "iOS"
+            BuildableName = "Furiends.app"
+            BlueprintName = "Furiends"
             ReferencedContainer = "container:Furiends.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
