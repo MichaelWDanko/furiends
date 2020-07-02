@@ -3,35 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA1A97542492F38A0093838D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A97532492F38A0093838D /* AppDelegate.swift */; };
-		DA1A97562492F38A0093838D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A97552492F38A0093838D /* SceneDelegate.swift */; };
+		4C34E5EF24A96E560051DFD0 /* FuriendsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E5EE24A96E560051DFD0 /* FuriendsApp.swift */; };
 		DA1A97592492F38A0093838D /* Furiends.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA1A97572492F38A0093838D /* Furiends.xcdatamodeld */; };
-		DA1A975B2492F38A0093838D /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A975A2492F38A0093838D /* ListView.swift */; };
+		DA1A975B2492F38A0093838D /* FriendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A975A2492F38A0093838D /* FriendListView.swift */; };
 		DA1A975D2492F38A0093838D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1A975C2492F38A0093838D /* Assets.xcassets */; };
-		DA1A97602492F38A0093838D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1A975F2492F38A0093838D /* Preview Assets.xcassets */; };
-		DA1A97632492F38A0093838D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1A97612492F38A0093838D /* LaunchScreen.storyboard */; };
-		DA5A90E42495B45500BE9C57 /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E32495B45500BE9C57 /* FriendView.swift */; };
+		DA5A90E42495B45500BE9C57 /* FriendListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E32495B45500BE9C57 /* FriendListRow.swift */; };
 		DA5A90E62495B47E00BE9C57 /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E52495B47E00BE9C57 /* AddFriendView.swift */; };
-		DA5A90E92495B89100BE9C57 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E82495B89100BE9C57 /* FriendModel.swift */; };
+		DA5A90E92495B89100BE9C57 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E82495B89100BE9C57 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C34E5EE24A96E560051DFD0 /* FuriendsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuriendsApp.swift; sourceTree = "<group>"; };
 		DA1A97502492F38A0093838D /* Furiends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furiends.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA1A97532492F38A0093838D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA1A97552492F38A0093838D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DA1A97582492F38A0093838D /* Furiends.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Furiends.xcdatamodel; sourceTree = "<group>"; };
-		DA1A975A2492F38A0093838D /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		DA1A975A2492F38A0093838D /* FriendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListView.swift; sourceTree = "<group>"; };
 		DA1A975C2492F38A0093838D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DA1A975F2492F38A0093838D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DA1A97622492F38A0093838D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA1A97642492F38A0093838D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA5A90E32495B45500BE9C57 /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
+		DA5A90E32495B45500BE9C57 /* FriendListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRow.swift; sourceTree = "<group>"; };
 		DA5A90E52495B47E00BE9C57 /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
-		DA5A90E82495B89100BE9C57 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		DA5A90E82495B89100BE9C57 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,32 +58,21 @@
 		DA1A97522492F38A0093838D /* Furiends */ = {
 			isa = PBXGroup;
 			children = (
-				DA1A97532492F38A0093838D /* AppDelegate.swift */,
-				DA1A97552492F38A0093838D /* SceneDelegate.swift */,
+				DA1A97642492F38A0093838D /* Info.plist */,
+				DA1A975C2492F38A0093838D /* Assets.xcassets */,
+				4C34E5EE24A96E560051DFD0 /* FuriendsApp.swift */,
 				DA5A90EA2495BF8600BE9C57 /* Components */,
 				DA5A90E72495B49300BE9C57 /* Views */,
-				DA1A975C2492F38A0093838D /* Assets.xcassets */,
-				DA1A97612492F38A0093838D /* LaunchScreen.storyboard */,
-				DA1A97642492F38A0093838D /* Info.plist */,
 				DA1A97572492F38A0093838D /* Furiends.xcdatamodeld */,
-				DA1A975E2492F38A0093838D /* Preview Content */,
 			);
 			path = Furiends;
-			sourceTree = "<group>";
-		};
-		DA1A975E2492F38A0093838D /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				DA1A975F2492F38A0093838D /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		DA5A90E72495B49300BE9C57 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DA5A90E82495B89100BE9C57 /* FriendModel.swift */,
-				DA1A975A2492F38A0093838D /* ListView.swift */,
+				DA5A90E82495B89100BE9C57 /* DataModel.swift */,
+				DA1A975A2492F38A0093838D /* FriendListView.swift */,
 				DA5A90E52495B47E00BE9C57 /* AddFriendView.swift */,
 			);
 			path = Views;
@@ -98,7 +81,7 @@
 		DA5A90EA2495BF8600BE9C57 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				DA5A90E32495B45500BE9C57 /* FriendView.swift */,
+				DA5A90E32495B45500BE9C57 /* FriendListRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -130,7 +113,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Michael Danko";
 				TargetAttributes = {
 					DA1A974F2492F38A0093838D = {
@@ -139,7 +122,7 @@
 				};
 			};
 			buildConfigurationList = DA1A974B2492F38A0093838D /* Build configuration list for PBXProject "Furiends" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -161,8 +144,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA1A97632492F38A0093838D /* LaunchScreen.storyboard in Resources */,
-				DA1A97602492F38A0093838D /* Preview Assets.xcassets in Resources */,
 				DA1A975D2492F38A0093838D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,28 +155,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA1A97542492F38A0093838D /* AppDelegate.swift in Sources */,
-				DA5A90E92495B89100BE9C57 /* FriendModel.swift in Sources */,
+				DA5A90E92495B89100BE9C57 /* DataModel.swift in Sources */,
 				DA1A97592492F38A0093838D /* Furiends.xcdatamodeld in Sources */,
-				DA1A975B2492F38A0093838D /* ListView.swift in Sources */,
+				DA1A975B2492F38A0093838D /* FriendListView.swift in Sources */,
 				DA5A90E62495B47E00BE9C57 /* AddFriendView.swift in Sources */,
-				DA5A90E42495B45500BE9C57 /* FriendView.swift in Sources */,
-				DA1A97562492F38A0093838D /* SceneDelegate.swift in Sources */,
+				4C34E5EF24A96E560051DFD0 /* FuriendsApp.swift in Sources */,
+				DA5A90E42495B45500BE9C57 /* FriendListRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		DA1A97612492F38A0093838D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA1A97622492F38A0093838D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DA1A97652492F38A0093838D /* Debug */ = {
@@ -224,6 +193,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -248,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -284,6 +254,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -302,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -317,11 +288,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Furiends/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = PD8DBCPLQ4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Furiends/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,11 +309,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Furiends/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = PD8DBCPLQ4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Furiends/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
