@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-enum PetGender: String {
-    case male = "male"
-    case female = "female"
+enum PetGender: String, CaseIterable {
+    case male = "Male"
+    case female = "Female"
 }
 
 struct Pet: Identifiable {

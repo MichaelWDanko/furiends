@@ -24,8 +24,8 @@ struct AddFriendView: View {
         isMaleToggle ? PetGender.male : PetGender.female
     }
     
-    let petGenders = ["Male", "Female"]
     @State private var petGenderSelection = 0
+//    Used to choose selection of PetGender enum and the allCases array.
     
 
     var body: some View {
@@ -35,14 +35,13 @@ struct AddFriendView: View {
                 Section(header: Text("Pet Details")) {
                     TextField("Name", text: $newPetName)
                     TextField("Breed", text: $newPetBreed)
+                
                     Picker(selection: $petGenderSelection, label: Text("Gender")) {
-                        ForEach(petGenders, id: \.self) {
-                            Text($0)
+                        ForEach(0..<PetGender.allCases.count) {selection in
+                            Text(PetGender.allCases[selection].rawValue)
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
-
-
                 }
                 
                 Section(header: Text("Breed")) {
@@ -63,9 +62,11 @@ struct AddFriendView: View {
                     }
                     
                 }// End of Section
+                
             }// End of Form
             .navigationTitle(Text("Add Friend"))
             .navigationBarTitleDisplayMode(.inline)
+            
         }// End of GeometryReader geo
     }// End of body
     
@@ -74,7 +75,7 @@ struct AddFriendView: View {
         FriendDataModel.addFriend(name: newPetName,
                                   breed: newPetBreed,
                                   owner: newPetOwnerName,
-                                  gender: newPetGender)
+                                  gender: PetGender.allCases[petGenderSelection])
         self.newPetName = ""
         self.newPetBreed = ""
         self.newPetOwnerName = ""

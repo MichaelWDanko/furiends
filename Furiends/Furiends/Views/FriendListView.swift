@@ -32,14 +32,9 @@ struct FriendListView: View {
                                 breed: pet.breed,
                                 gender: pet.gender,
                                 screenWidth: geo.size.width
-                                
-//                                randomPic: Int.random(in: 1...2)
+                
                             )
                             .animation(.default)
-//                            FriendView(
-//                                name: self.dataModel.petList[pet].name,
-//                                breed: self.dataModel.petList[pet].breed,
-//                                screenWidth: geo.size.width)
                             Spacer()
                         }//End of HStack
                         
@@ -47,16 +42,13 @@ struct FriendListView: View {
                 }// End of ScrollView
                 .navigationBarItems(trailing:
                     NavigationLink(destination: AddFriendView(FriendDataModel: self.dataModel)) {
-                        Image(systemName: "plus")
-//                        Button(action: self.showAddFriend) {
-//                            Image(systemName: "plus")
-//                        }
+                        HStack {
+//                            Image(systemName: "plus.app.fill")
+                            Text("Add Friend")
+                        }
                     }
                 )
                 .navigationTitle(Text("Furiends"))
-//                .navigationBarItems(trailing: Button(action: self.showAddFriend) {
-//                    Image(systemName: "plus")
-//                })
                 .sheet(isPresented: self.$displayAddFriendSheet) {
                     AddFriendView(FriendDataModel: self.dataModel)
                 }
