@@ -23,22 +23,24 @@ struct FriendListView: View {
         GeometryReader { geo in
             NavigationView {
                 ScrollView {
+                    
                     ForEach(self.dataModel.petList) { pet in
-                        
-                        HStack {
-                            Spacer()
-                            FriendListRow(
-                                name: pet.name,
-                                breed: pet.breed,
-                                gender: pet.gender,
-                                screenWidth: geo.size.width
-                
-                            )
-                            .animation(.default)
-                            Spacer()
-                        }//End of HStack
-                        
+                        NavigationLink(destination: FriendDetailView()) {
+                            HStack {
+                                Spacer()
+                                FriendListRow(
+                                    name: pet.name,
+                                    breed: pet.breed,
+                                    gender: pet.gender,
+                                    screenWidth: geo.size.width
+                    
+                                )
+                                .animation(.default)
+                                Spacer()
+                            }//End of HStack
+                        }
                     }// End of ForEach
+                    
                 }// End of ScrollView
                 .navigationBarItems(trailing:
                     NavigationLink(destination: AddFriendView(FriendDataModel: self.dataModel)) {
