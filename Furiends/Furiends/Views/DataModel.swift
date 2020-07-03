@@ -13,7 +13,7 @@ enum PetGender: String, CaseIterable {
     case female = "Female"
 }
 
-struct Pet: Identifiable {
+struct Pet: Identifiable, Equatable {
     var id = UUID().uuidString
     var name: String
     var breed: String
@@ -32,6 +32,17 @@ class FuriendModel: ObservableObject {
             owner: owner,
             gender: gender
         ))
+    }
+    
+    func removeFriendWithIdentifier(of id: String) {
+        let index: Int? = petList.firstIndex() {
+            $0.id == id
+        }
+        if let unwrappedIndex = index {
+            petList.remove(at: unwrappedIndex)
+        } else {
+            fatalError("Tried to remove an item from the array of petList without an index for the UUID.")
+        }
     }
     
     init() {
