@@ -43,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				DA1A97522492F38A0093838D /* Furiends */,
-				DA1A97512492F38A0093838D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +52,7 @@
 				DA1A97502492F38A0093838D /* Furiends.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		DA1A97522492F38A0093838D /* Furiends */ = {
@@ -64,6 +64,7 @@
 				DA5A90EA2495BF8600BE9C57 /* Components */,
 				DA5A90E72495B49300BE9C57 /* Views */,
 				DA1A97572492F38A0093838D /* Furiends.xcdatamodeld */,
+				DA1A97512492F38A0093838D /* Products */,
 			);
 			path = Furiends;
 			sourceTree = "<group>";
