@@ -24,13 +24,16 @@ struct FriendListView: View {
             NavigationView {
                 ScrollView {
                     ForEach(self.dataModel.petList) { pet in
+                        
                         HStack {
                             Spacer()
                             FriendListRow(
                                 name: pet.name,
                                 breed: pet.breed,
-                                screenWidth: geo.size.width,
-                                randomPic: Int.random(in: 1...2)
+                                gender: pet.gender,
+                                screenWidth: geo.size.width
+                                
+//                                randomPic: Int.random(in: 1...2)
                             )
                             .animation(.default)
 //                            FriendView(
@@ -38,15 +41,22 @@ struct FriendListView: View {
 //                                breed: self.dataModel.petList[pet].breed,
 //                                screenWidth: geo.size.width)
                             Spacer()
-                        }
-                    }
+                        }//End of HStack
+                        
+                    }// End of ForEach
                 }// End of ScrollView
-                .navigationBarTitle(Text("Furiends"))
-                    .navigationBarItems(trailing: Button(action: self.showAddFriend) {
-                    Image(systemName: "plus")
-                }
-                
+                .navigationBarItems(trailing:
+                    NavigationLink(destination: AddFriendView(FriendDataModel: self.dataModel)) {
+                        Image(systemName: "plus")
+//                        Button(action: self.showAddFriend) {
+//                            Image(systemName: "plus")
+//                        }
+                    }
                 )
+                .navigationTitle(Text("Furiends"))
+//                .navigationBarItems(trailing: Button(action: self.showAddFriend) {
+//                    Image(systemName: "plus")
+//                })
                 .sheet(isPresented: self.$displayAddFriendSheet) {
                     AddFriendView(FriendDataModel: self.dataModel)
                 }

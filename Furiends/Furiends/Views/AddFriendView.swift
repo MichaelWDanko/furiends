@@ -9,53 +9,44 @@
 import SwiftUI
 
 struct AddFriendView: View {
-    
+    @Environment(\.presentationMode) var isPresented
     @ObservedObject var FriendDataModel: FuriendModel
     
     @State private var newPetName = ""
     @State private var newPetBreed = ""
     @State private var newPetOwnerName = ""
-    @Environment(\.presentationMode) var isPresented
+    @State private var isMaleToggle = true
     
+    private var genderToggleLabel: String {
+        isMaleToggle ? "Male" : "Female"
+    }
+    private var newPetGender: PetGender {
+        isMaleToggle ? PetGender.male : PetGender.female
+    }
+    
+    let petGenders = ["Male", "Female"]
+    @State private var petGenderSelection = 0
+    
+
     var body: some View {
         
         GeometryReader { geo in
             Form {
-                
-                Section {
-                    Button(action: saveFriend, label: {
-                        HStack {
-                            Spacer()
-                            VStack {
-                                Image(systemName: "plus.circle")
-                                    
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: geo.size.width / 7)
-                                Text("Add Picture")
-                                    .font(.headline)
-                            }
-                            Spacer()
-                        }
-                    })// End of Button
-                    
-                    
-                }
-                
                 Section(header: Text("Pet Details")) {
                     TextField("Name", text: $newPetName)
                     TextField("Breed", text: $newPetBreed)
-                    
-//MARK: TODO Add SegmentedPickerStyle
-//Seems like a bug in SegmentedPickerStyle()
-//
-//                    TextField("Behavior")
-//                    Picker("Pet Behavior", selection: $petBehaviorSelection) {
-//                        ForEach(behaviors, id: \.self) { selection in
-//                            Text(selection)
-//                        }
-//                    }
-//                    .pickerStyle(SegmentedPickerStyle())
+                    Picker(selection: $petGenderSelection, label: Text("Gender")) {
+                        ForEach(petGenders, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+
+
+                }
+                
+                Section(header: Text("Breed")) {
+                    Toggle(genderToggleLabel, isOn: $isMaleToggle)
                 }
                 
                 
@@ -73,15 +64,17 @@ struct AddFriendView: View {
                     
                 }// End of Section
             }// End of Form
+            .navigationTitle(Text("Add Friend"))
+            .navigationBarTitleDisplayMode(.inline)
         }// End of GeometryReader geo
     }// End of body
     
     func saveFriend() {
         print(FriendDataModel.petList)
-        FriendDataModel.addFriend(name: newPetName, breed: newPetBreed, owner: newPetOwnerName)
-
-        
-        
+        FriendDataModel.addFriend(name: newPetName,
+                                  breed: newPetBreed,
+                                  owner: newPetOwnerName,
+                                  gender: newPetGender)
         self.newPetName = ""
         self.newPetBreed = ""
         self.newPetOwnerName = ""
