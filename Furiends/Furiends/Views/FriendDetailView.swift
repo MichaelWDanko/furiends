@@ -9,13 +9,38 @@
 import SwiftUI
 
 struct FriendDetailView: View {
+    @Environment(\.presentationMode) var isPresented
+    @ObservedObject var FriendDataModel: FuriendModel
+    var friendDetail: Pet
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(friendDetail.id)
+            Text(friendDetail.name)
+            Text(friendDetail.breed)
+            Text(friendDetail.gender.rawValue)
+            Text(friendDetail.owner)
+            Spacer()
+            Button(action: deleteFriend) {
+                Text("Delete")
+            }
+            .foregroundColor(Color.red)
+            Spacer()
+        }
+    }// End of body
+    
+    func deleteFriend() {
+        print("Should delete something")
+        FriendDataModel.removeFriendWithIdentifier(of: friendDetail.id)
+        self.isPresented.wrappedValue.dismiss()
+        
     }
-}
+    
+}// End of FriendDetailView
 
-struct FriendDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendDetailView()
-    }
-}
+//
+//struct FriendDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FriendDetailView()
+//    }
+//}

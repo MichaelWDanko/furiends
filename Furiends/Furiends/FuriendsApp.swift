@@ -14,7 +14,7 @@ let dataModel = FuriendModel()
 struct FuriendsApp: App {
     var body: some Scene {
         WindowGroup {
-            FriendListView().environmentObject(dataModel)
+            FriendScrollView().environmentObject(dataModel)
         }
     }
 }

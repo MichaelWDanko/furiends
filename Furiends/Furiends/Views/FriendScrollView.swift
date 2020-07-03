@@ -1,5 +1,5 @@
 //
-//  FriendListView.swift
+//  FriendScrollView.swift
 //  Furiends
 //
 //  Created by Michael Danko on 6/11/20.
@@ -13,7 +13,7 @@ import SwiftUI
 //}
 
 
-struct FriendListView: View {   
+struct FriendScrollView: View {   
     
     @EnvironmentObject var dataModel: FuriendModel
     
@@ -25,7 +25,7 @@ struct FriendListView: View {
                 ScrollView {
                     
                     ForEach(self.dataModel.petList) { pet in
-                        NavigationLink(destination: FriendDetailView()) {
+                        NavigationLink(destination: FriendDetailView(FriendDataModel: self.dataModel, friendDetail: pet)) {
                             HStack {
                                 Spacer()
                                 FriendListRow(
@@ -40,7 +40,7 @@ struct FriendListView: View {
                             }//End of HStack
                         }
                     }// End of ForEach
-                    
+
                 }// End of ScrollView
                 .navigationBarItems(trailing:
                     NavigationLink(destination: AddFriendView(FriendDataModel: self.dataModel)) {
@@ -66,7 +66,7 @@ struct FriendListView: View {
         
     }// Enf of showAddFriend
     
-}// End of FriendListView
+}// End of FriendScrollView
 
 
 //struct ContentView_Previews: PreviewProvider {
