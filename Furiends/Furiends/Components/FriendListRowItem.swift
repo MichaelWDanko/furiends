@@ -1,5 +1,5 @@
 //
-//  FriendListRow.swift
+//  FriendListRowItem.swift
 //  Furiends
 //
 //  Created by Michael Danko on 6/13/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FriendListRow: View {
+struct FriendListRowItem: View {
     
     var name: String
     var breed: String
@@ -53,7 +53,7 @@ struct FriendListRow: View {
 
 
 
-//struct FriendListRow: View {
+//struct FriendListRowItem: View {
 //    @State private var isExpanded = false
 //    @Namespace private var animation
 //    var name =  ""

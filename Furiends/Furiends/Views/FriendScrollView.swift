@@ -28,7 +28,7 @@ struct FriendScrollView: View {
                         NavigationLink(destination: FriendDetailView(FriendDataModel: self.dataModel, friendDetail: pet)) {
                             HStack {
                                 Spacer()
-                                FriendListRow(
+                                FriendListRowItem(
                                     name: pet.name,
                                     breed: pet.breed,
                                     gender: pet.gender,
