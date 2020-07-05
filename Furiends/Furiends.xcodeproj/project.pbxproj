@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		4C34E5EF24A96E560051DFD0 /* FuriendsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E5EE24A96E560051DFD0 /* FuriendsApp.swift */; };
 		4CAB54A124AF732A0042CB12 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB54A024AF732A0042CB12 /* FriendDetailView.swift */; };
+		4CFAD7E324B20A890039AB25 /* FriendDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAD7E224B20A890039AB25 /* FriendDetailItem.swift */; };
 		DA1A97592492F38A0093838D /* Furiends.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA1A97572492F38A0093838D /* Furiends.xcdatamodeld */; };
 		DA1A975B2492F38A0093838D /* FriendScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A975A2492F38A0093838D /* FriendScrollView.swift */; };
 		DA1A975D2492F38A0093838D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1A975C2492F38A0093838D /* Assets.xcassets */; };
-		DA5A90E42495B45500BE9C57 /* FriendListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E32495B45500BE9C57 /* FriendListRow.swift */; };
+		DA5A90E42495B45500BE9C57 /* FriendListRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E32495B45500BE9C57 /* FriendListRowItem.swift */; };
 		DA5A90E62495B47E00BE9C57 /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E52495B47E00BE9C57 /* AddFriendView.swift */; };
 		DA5A90E92495B89100BE9C57 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A90E82495B89100BE9C57 /* DataModel.swift */; };
 /* End PBXBuildFile section */
@@ -20,12 +21,13 @@
 /* Begin PBXFileReference section */
 		4C34E5EE24A96E560051DFD0 /* FuriendsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuriendsApp.swift; sourceTree = "<group>"; };
 		4CAB54A024AF732A0042CB12 /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
+		4CFAD7E224B20A890039AB25 /* FriendDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailItem.swift; sourceTree = "<group>"; };
 		DA1A97502492F38A0093838D /* Furiends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furiends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1A97582492F38A0093838D /* Furiends.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Furiends.xcdatamodel; sourceTree = "<group>"; };
 		DA1A975A2492F38A0093838D /* FriendScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendScrollView.swift; sourceTree = "<group>"; };
 		DA1A975C2492F38A0093838D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA1A97642492F38A0093838D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA5A90E32495B45500BE9C57 /* FriendListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRow.swift; sourceTree = "<group>"; };
+		DA5A90E32495B45500BE9C57 /* FriendListRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRowItem.swift; sourceTree = "<group>"; };
 		DA5A90E52495B47E00BE9C57 /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
 		DA5A90E82495B89100BE9C57 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +87,8 @@
 		DA5A90EA2495BF8600BE9C57 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				DA5A90E32495B45500BE9C57 /* FriendListRow.swift */,
+				DA5A90E32495B45500BE9C57 /* FriendListRowItem.swift */,
+				4CFAD7E224B20A890039AB25 /* FriendDetailItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -162,9 +165,10 @@
 				DA5A90E92495B89100BE9C57 /* DataModel.swift in Sources */,
 				DA1A97592492F38A0093838D /* Furiends.xcdatamodeld in Sources */,
 				DA1A975B2492F38A0093838D /* FriendScrollView.swift in Sources */,
+				4CFAD7E324B20A890039AB25 /* FriendDetailItem.swift in Sources */,
 				DA5A90E62495B47E00BE9C57 /* AddFriendView.swift in Sources */,
 				4C34E5EF24A96E560051DFD0 /* FuriendsApp.swift in Sources */,
-				DA5A90E42495B45500BE9C57 /* FriendListRow.swift in Sources */,
+				DA5A90E42495B45500BE9C57 /* FriendListRowItem.swift in Sources */,
 				4CAB54A124AF732A0042CB12 /* FriendDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
