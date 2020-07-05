@@ -11,36 +11,54 @@ import SwiftUI
 struct FriendDetailView: View {
     @Environment(\.presentationMode) var isPresented
     @ObservedObject var FriendDataModel: FuriendModel
+    
     var friendDetail: Pet
     
+    @State private var displayDetailItems = false
+    
     var body: some View {
-        VStack {
-            Text(friendDetail.id)
-            Text(friendDetail.name)
-            Text(friendDetail.breed)
-            Text(friendDetail.gender.rawValue)
-            Text(friendDetail.owner)
-            Spacer()
-            Button(action: deleteFriend) {
-                Text("Delete")
+        ZStack {
+            Color("Background").edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            VStack {
+                    FriendDetailItem(textLabel: "Name", textContent: friendDetail.name)
+                        .detailItem()
+                    FriendDetailItem(textLabel: "Breed", textContent: friendDetail.breed)
+                        .detailItem()
+                    FriendDetailItem(textLabel: "Gender", textContent: friendDetail.gender.rawValue)
+                        .detailItem()
+                    FriendDetailItem(textLabel: "Owner", textContent: friendDetail.owner)
+                        .detailItem()
+                
+//                    FriendDetailItem(textLabel: "Energy", symbolContent: Image(systemName: "bolt.fill"), qty: PetEnergy.high.rawValue)
+//                        .detailItem()
+                    
+                    Spacer()
+                    
+                    Button(action: deleteFriend) {
+                        ZStack {
+                            Rectangle()
+                                .pillShape()
+                            Text("Delete Friend")
+                                .foregroundColor(Color.red)
+                        }
+                    }// End of Button
+                    .detailItem()
+                    .frame(height: 40)
+            }// End of VStack
+            .padding(.top)
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                displayDetailItems = true
             }
-            .foregroundColor(Color.red)
-            Spacer()
-        }
+            
+        }// End of ZStack
+        
     }// End of body
     
     func deleteFriend() {
-        print("Should delete something")
         FriendDataModel.removeFriendWithIdentifier(of: friendDetail.id)
         self.isPresented.wrappedValue.dismiss()
         
     }
     
 }// End of FriendDetailView
-
-//
-//struct FriendDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FriendDetailView()
-//    }
-//}

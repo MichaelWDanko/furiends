@@ -36,8 +36,9 @@ struct FriendListRowItem: View {
                 Spacer()
                 VStack {
                     Text(name)
-                        .foregroundColor(Color("PrimaryFont"))
+                        .foregroundColor(.primary)
                         .font(.title)
+                        .fontWeight(.light)
                         .frame(minWidth: 0, maxWidth: .infinity)
                 }
                 .padding(.all, 10)
@@ -48,80 +49,6 @@ struct FriendListRowItem: View {
     
     
 }
-
-
-
-
-
-//struct FriendListRowItem: View {
-//    @State private var isExpanded = false
-//    @Namespace private var animation
-//    var name =  ""
-//    var breed = ""
-//
-//    var screenWidth: CGFloat
-//    var maxWidth: CGFloat {
-//        isExpanded ? screenWidth / 4 : screenWidth / 2
-//    }
-//    var randomPic = Int.random(in: 1...2)
-//
-//    var body: some View {
-//
-//        Group {
-//            if self.isExpanded {
-//                //Row is expanded. Need to show details beside picture.
-//
-//                HStack {
-////                    Spacer()
-//                    Image("dog\(self.randomPic)")
-//                        .resizable()
-//                        .furiendImage()
-//                        .frame(width: maxWidth, height: maxWidth)
-//                        .matchedGeometryEffect(id: "FuriendImage", in: self.animation)
-////                    Spacer()
-//                    VStack {
-//                        Text(self.name).font(.title)
-//                            .furiendName()
-//                        Text(self.breed).font(.headline)
-//                            .animation(.easeIn)
-//                    }
-//                    .foregroundColor(.primary)
-//                    Spacer()
-//
-//                }// End of HStack
-////                .animation(.easeOut(duration: 1.0))
-//                .matchedGeometryEffect(id: "DetailsContainer", in: self.animation)
-//                .onTapGesture {
-//                    self.isExpanded.toggle()
-//                }
-//
-//            } else {
-//                //Row is not expanded. Need to show name below picture.
-//
-//                VStack {
-//
-//                    Image("dog\(self.randomPic)")
-//                        .resizable()
-//                        .furiendImage()
-//                        .frame(width: maxWidth, height: maxWidth)
-//                        .matchedGeometryEffect(id: "FuriendImage", in: self.animation)
-//
-//                    Text(self.name)
-//                        .furiendName()
-//
-//               }//End of VStack
-////                .animation(.easeOut(duration: 1.0))
-//                .matchedGeometryEffect(id: "DetailsContainer", in: self.animation)
-//                .onTapGesture {
-//                    self.isExpanded.toggle()
-//
-//                }
-//
-//            }// End of If/Else
-//        }
-//    }// End of body
-//
-//}// End of FriendView
 
 struct FuriendImage: ViewModifier {
     func body(content: Content) -> some View {

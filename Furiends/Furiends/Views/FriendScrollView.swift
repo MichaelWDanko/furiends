@@ -22,37 +22,44 @@ struct FriendScrollView: View {
     var body: some View {
         GeometryReader { geo in
             NavigationView {
-                ScrollView {
-                    
-                    ForEach(self.dataModel.petList) { pet in
-                        NavigationLink(destination: FriendDetailView(FriendDataModel: self.dataModel, friendDetail: pet)) {
-                            HStack {
-                                Spacer()
-                                FriendListRowItem(
-                                    name: pet.name,
-                                    breed: pet.breed,
-                                    gender: pet.gender,
-                                    screenWidth: geo.size.width
-                    
-                                )
-                                .animation(.default)
-                                Spacer()
-                            }//End of HStack
-                        }
-                    }// End of ForEach
+                ZStack {
+                    Color("Background").edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    ScrollView {
+                        
+                        ForEach(self.dataModel.petList) { pet in
+                            NavigationLink(destination: FriendDetailView(FriendDataModel: self.dataModel, friendDetail: pet)) {
+                                HStack {
+                                    Spacer()
+                                    FriendListRowItem(
+                                        name: pet.name,
+                                        breed: pet.breed,
+                                        gender: pet.gender,
+                                        screenWidth: geo.size.width
+                        
+                                    )
+                                    .animation(.default)
+                                    Spacer()
+                                }//End of HStack
+                            }
+                        }// End of ForEach
 
-                }// End of ScrollView
-                .navigationBarItems(trailing:
-                    NavigationLink(destination: AddFriendView(FriendDataModel: self.dataModel)) {
-                        HStack {
-//                            Image(systemName: "plus.app.fill")
-                            Text("Add Friend")
+                    }// End of ScrollView
+                    .navigationBarItems(trailing:
+                        NavigationLink(destination: AddFriendView(FriendDataModel: self.dataModel)) {
+                            HStack {
+                                Image(systemName: "plus.app.fill")
+                                Text("Furiend")
+                                    .fontWeight(.light)
+                                    
+                            }
+                            .foregroundColor(.primary)
                         }
+                    )
+                    
+                    .navigationTitle(Text("Furiends"))
+                    .sheet(isPresented: self.$displayAddFriendSheet) {
+                        AddFriendView(FriendDataModel: self.dataModel)
                     }
-                )
-                .navigationTitle(Text("Furiends"))
-                .sheet(isPresented: self.$displayAddFriendSheet) {
-                    AddFriendView(FriendDataModel: self.dataModel)
                 }
                 
             }// End of NavigationView
@@ -61,10 +68,8 @@ struct FriendScrollView: View {
     
     func showAddFriend() {
         self.displayAddFriendSheet.toggle()
-//        self.dataModel.addFriend(name: "Jax", breed: "Doodle")
-//        print(dataModel.petList)
         
-    }// Enf of showAddFriend
+    }// End of showAddFriend
     
 }// End of FriendScrollView
 

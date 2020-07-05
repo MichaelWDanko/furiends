@@ -13,6 +13,12 @@ enum PetGender: String, CaseIterable {
     case female = "Female"
 }
 
+enum PetEnergy: Int, CaseIterable {
+    case low = 1
+    case medium = 2
+    case high = 3
+}
+
 struct Pet: Identifiable, Equatable {
     var id = UUID().uuidString
     var name: String
