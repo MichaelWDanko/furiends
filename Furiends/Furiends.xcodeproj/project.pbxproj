@@ -10,6 +10,7 @@
 		4C34E5EF24A96E560051DFD0 /* FuriendsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E5EE24A96E560051DFD0 /* FuriendsApp.swift */; };
 		4CAB54A124AF732A0042CB12 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB54A024AF732A0042CB12 /* FriendDetailView.swift */; };
 		4CFAD7E324B20A890039AB25 /* FriendDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAD7E224B20A890039AB25 /* FriendDetailItem.swift */; };
+		4CFAD7EA24B21FA00039AB25 /* ModifiersExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAD7E924B21FA00039AB25 /* ModifiersExtensions.swift */; };
 		DA1A97592492F38A0093838D /* Furiends.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA1A97572492F38A0093838D /* Furiends.xcdatamodeld */; };
 		DA1A975B2492F38A0093838D /* FriendScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A975A2492F38A0093838D /* FriendScrollView.swift */; };
 		DA1A975D2492F38A0093838D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1A975C2492F38A0093838D /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		4C34E5EE24A96E560051DFD0 /* FuriendsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuriendsApp.swift; sourceTree = "<group>"; };
 		4CAB54A024AF732A0042CB12 /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
 		4CFAD7E224B20A890039AB25 /* FriendDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailItem.swift; sourceTree = "<group>"; };
+		4CFAD7E924B21FA00039AB25 /* ModifiersExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiersExtensions.swift; sourceTree = "<group>"; };
 		DA1A97502492F38A0093838D /* Furiends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furiends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1A97582492F38A0093838D /* Furiends.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Furiends.xcdatamodel; sourceTree = "<group>"; };
 		DA1A975A2492F38A0093838D /* FriendScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendScrollView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				DA1A97642492F38A0093838D /* Info.plist */,
 				DA1A975C2492F38A0093838D /* Assets.xcassets */,
 				4C34E5EE24A96E560051DFD0 /* FuriendsApp.swift */,
+				4CFAD7E924B21FA00039AB25 /* ModifiersExtensions.swift */,
 				DA5A90EA2495BF8600BE9C57 /* Components */,
 				DA5A90E72495B49300BE9C57 /* Views */,
 				DA1A97572492F38A0093838D /* Furiends.xcdatamodeld */,
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CFAD7EA24B21FA00039AB25 /* ModifiersExtensions.swift in Sources */,
 				DA5A90E92495B89100BE9C57 /* DataModel.swift in Sources */,
 				DA1A97592492F38A0093838D /* Furiends.xcdatamodeld in Sources */,
 				DA1A975B2492F38A0093838D /* FriendScrollView.swift in Sources */,
